@@ -13,25 +13,43 @@
 </head>
 <body class="bg-light py-5">
 
-    <div class="container">
-        <div class="card shadow p-4 rounded-4">
-            <h3 class="mb-4 text-center text-primary">اكتب بياناتكم</h3>
-
-            <div class="row g-3 mb-3">
-                <div class="col-md-4">
-                    <input type="text" id="username" class="form-control" placeholder="اسم المستخدم" />
-                </div>
-                <div class="col-md-4">
-                    <input type="number" id="fromTime" class="form-control" placeholder="من الساعة" min="0" max="23" />
-                </div>
-                <div class="col-md-4">
-                    <input type="number" id="toTime" class="form-control" placeholder="إلى الساعة" min="0" max="23" />
-                </div>
+    <div class="container"><div class="row mb-3">
+        <div class="col-md-4">
+            <label for="username" class="form-label">اسم المستخدم</label>
+            <input type="text" id="username" class="form-control" placeholder="أدخل الاسم">
+        </div>
+    
+        <div class="col-md-4">
+            <label for="fromTime" class="form-label">من الساعة</label>
+            <div class="input-group">
+                <input type="text" id="fromTime" class="form-control" placeholder="من 1 إلى 12">
+                <select id="fromPeriod" class="form-select" style="max-width: 90px;">
+                    <option value="AM">صباحًا</option>
+                    <option value="PM">مساءً</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <label for="toTime" class="form-label">إلى الساعة</label>
+            <div class="input-group">
+                <input type="text" id="toTime" class="form-control" placeholder="من 1 إلى 12">
+                <select id="toPeriod" class="form-select" style="max-width: 90px;">
+                    <option value="AM">صباحًا</option>
+                    <option value="PM">مساءً</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+            
+            </div>
             </div>
 
             <div class="d-flex justify-content-center gap-3">
                 <button onclick="handleClick()" class="btn btn-success px-4">أضف المستخدم</button>
                 <button onclick="khata3dad()" class="btn btn-primary px-4">تحقق من الساعات المتاحة</button>
+                <button onclick="resetAll()" class="btn btn-secondary">إعادة تعيين</button>
             </div>
             <div class="container mt-4">
                 <h5 class="text-secondary">قائمة المستخدمين:</h5>
