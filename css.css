@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+input::placeholder {
+    text-align: right;
+}

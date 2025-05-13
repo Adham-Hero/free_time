@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظيم الوقت</title>
+
+    <link rel="icon" href="icon.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="card shadow p-4 rounded-4">
+            <h3 class="mb-4 text-center text-primary">اكتب بياناتكم</h3>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <input type="text" id="username" class="form-control" placeholder="اسم المستخدم" />
+                </div>
+                <div class="col-md-4">
+                    <input type="number" id="fromTime" class="form-control" placeholder="من الساعة" min="0" max="23" />
+                </div>
+                <div class="col-md-4">
+                    <input type="number" id="toTime" class="form-control" placeholder="إلى الساعة" min="0" max="23" />
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center gap-3">
+                <button onclick="handleClick()" class="btn btn-success px-4">أضف المستخدم</button>
+                <button onclick="khata3dad()" class="btn btn-primary px-4">تحقق من الساعات المتاحة</button>
+            </div>
+            <div class="container mt-4">
+                <h5 class="text-secondary">قائمة المستخدمين:</h5>
+                <ul id="userList" class="list-group"></ul>
+            </div>
+            <div class="container mt-4">
+                <h5 class="text-success">الساعات المتاحة:</h5>
+                <div id="availableTimes" class="alert alert-info p-3"></div>
+            </div>                        
+        </div>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-3 mt-5 fixed-bottom">
+        <div class="container">
+            <p class="mb-0">
+                by 
+                <a href="https://www.facebook.com/share/1HhjUwhNf6/" target="_blank" class="text-light text-decoration-none fw-bold">
+                    Adham Mohamed
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
